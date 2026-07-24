@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПравенСъветник - Бърз правен отговор за 9.99 €</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ПравенСъветник</h1>
+            <p>Получете експертен анализ на вашия правен казус, изготвен от автоматизирана система, съобразен с българското законодателство.</p>
+        </header>
+
+        <main>
+            <form id="legalForm">
+                <div class="form-group">
+                    <label for="email">Вашият имейл адрес (за получаване на отговора):</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Опишете вашия правен въпрос:</label>
+                    <textarea id="question" name="question" rows="6" required placeholder="Моля, избягвайте въвеждането на чувствителни лични данни (като ЕГН). Опишете казуса накратко..."></textarea>
+                </div>
+
+                <div class="price-box">
+                    <span>Цена за консултация:</span>
+                    <strong>9.99 €</strong>
+                </div>
+
+                <button type="submit" class="pay-btn">Запитай и плати (9.99 €)</button>
+
+                <!-- Юридически защити и условия -->
+                <div class="legal-notice">
+                    <p><strong>Важно правно уточнение (Disclaimer):</strong> Предоставената информация е генерирана от автоматизирана система за справка и има строго информативен характер. Тя не представлява официална правна консултация, адвокатска услуга или процесуално представителство. За конкретни казуси се обръщайте към квалифициран специалист.</p>
+                    <p class="terms-link">С натискането на бутона за плащане декларирате, че сте навършили 18 години и приемате нашите <a href="terms.html" target="_blank">Общи условия</a> и политика поверителност (GDPR).</p>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
