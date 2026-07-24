@@ -1,51 +1,171 @@
-<!DOCTYPE html>
-<html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПравенСъветник - Бърз правен отговор за 9.99 €</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="site-header">
-            <!-- Модернистично геометрично лого -->
-            <div class="logo-wrapper">
-                <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-                <h1>ПравенСъветник</h1>
-            </div>
-            <p>Получете експертен анализ на вашия правен казус, изготвен от автоматизирана система, съобразен с българското законодателство.</p>
-        </header>
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius: 16px;
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
 
-        <main>
-            <form action="ТУК_ЩЕ_ПОСТАВИМ_ПЛАТЕЖНИЯ_ЛИНК" method="GET">
-                <div class="form-group">
-                    <label for="email">Вашият имейл адрес (за получаване на отговора):</label>
-                    <input type="email" id="email" name="email" required placeholder="name@example.com">
-                </div>
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-                <div class="form-group">
-                    <label for="question">Опишете вашия правен въпрос:</label>
-                    <textarea id="question" name="question" rows="6" required placeholder="Опишете казуса накратко. Моля, избягвайте въвеждането на чувствителни лични данни като ЕГН."></textarea>
-                </div>
+.container {
+    width: 100%;
+    max-width: 580px;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
 
-                <div class="price-box">
-                    <span>Цена за консултация:</span>
-                    <strong>9.99 €</strong>
-                </div>
+.site-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-                <button type="submit" class="pay-btn">Плати 9.99 € и задай въпрос</button>
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
 
-                <div class="legal-notice">
-                    <p><strong>Важно правно уточнение (Disclaimer):</strong> Предоставената информация е генерирана от автоматизирана система за справка и има строго информативен характер. Тя не представлява официална правна консултация или адвокатско представителство.</p>
-                    <p class="terms-link">С натискането на бутона приемате нашите <a href="terms.html" target="_blank">Общи условия</a>.</p>
-                </div>
-            </form>
-        </main>
-    </div>
-</body>
-</html>
+.brand-logo {
+    width: 36px;
+    height: 36px;
+    stroke: var(--primary);
+    filter: drop-shadow(0 4px 6px rgba(37, 99, 235, 0.25));
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--text-main);
+}
+
+.site-header p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+input[type="email"], textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 15px;
+    background: #f8fafc;
+    color: var(--text-main);
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+input[type="email"]:focus, textarea:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #1e40af;
+}
+
+.price-box strong {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pay-btn {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: all 0.25s ease;
+}
+
+.pay-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.pay-btn:active {
+    transform: translateY(0);
+}
+
+.legal-notice {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.legal-notice p {
+    margin-bottom: 6px;
+}
+
+.terms-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-link a:hover {
+    text-decoration: underline;
+}
