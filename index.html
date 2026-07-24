@@ -14,7 +14,17 @@
         </header>
 
         <main>
+            <div class="payment-instructions">
+                <h3>Стъпка 1: Направете превод от 9.99 € през Viber Pay</h3>
+                <p>Моля, преведете точно <strong>9.99 EUR</strong> към следната сметка през вашия Viber Pay портфейл:</p>
+                <ul>
+                    <li><strong>Име на получател:</strong> TSVETELINA STOYANOVA</li>
+                    <li><strong>IBAN:</strong> BG31PATC40022157288870</li>
+                </ul>
+            </div>
+
             <form id="legalForm">
+                <h3>Стъпка 2: Въведете вашия въпрос</h3>
                 <div class="form-group">
                     <label for="email">Вашият имейл адрес (за получаване на отговора):</label>
                     <input type="email" id="email" name="email" required placeholder="name@example.com">
@@ -22,20 +32,20 @@
 
                 <div class="form-group">
                     <label for="question">Опишете вашия правен въпрос:</label>
-                    <textarea id="question" name="question" rows="6" required placeholder="Моля, избягвайте въвеждането на чувствителни лични данни (като ЕГН). Опишете казуса накратко..."></textarea>
+                    <textarea id="question" name="question" rows="5" required placeholder="Опишете казуса накратко. Моля, избягвайте въвеждането на чувствителни лични данни като ЕГН."></textarea>
                 </div>
 
                 <div class="price-box">
-                    <span>Цена за консултация:</span>
+                    <span>Сума за консултация:</span>
                     <strong>9.99 €</strong>
                 </div>
 
-                <button type="submit" class="pay-btn">Запитай и плати (9.99 €)</button>
+                <button type="submit" class="pay-btn">Изпрати въпроса след извършено плащане</button>
 
                 <!-- Юридически защити и условия -->
                 <div class="legal-notice">
-                    <p><strong>Важно правно уточнение (Disclaimer):</strong> Предоставената информация е генерирана от автоматизирана система за справка и има строго информативен характер. Тя не представлява официална правна консултация, адвокатска услуга или процесуално представителство. За конкретни казуси се обръщайте към квалифициран специалист.</p>
-                    <p class="terms-link">С натискането на бутона за плащане декларирате, че сте навършили 18 години и приемате нашите <a href="terms.html" target="_blank">Общи условия</a> и политика поверителност (GDPR).</p>
+                    <p><strong>Важно правно уточнение (Disclaimer):</strong> Предоставената информация е генерирана от автоматизирана система за справка и има строго информативен характер. Тя не представлява официална правна консултация, адвокатска услуга или процесуално представителство.</p>
+                    <p class="terms-link">С изпращането на формата декларирате, че сте извършили плащането по Viber Pay и приемате нашите <a href="terms.html" target="_blank">Общи условия</a>.</p>
                 </div>
             </form>
         </main>
