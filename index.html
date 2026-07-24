@@ -8,13 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>ПравенСъветник</h1>
+        <header class="site-header">
+            <!-- Вградено векторно лого (везна/правосъдие) до името -->
+            <div class="logo-wrapper">
+                <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v18"></path>
+                    <path d="M3 7l9-4 9 4"></path>
+                    <path d="M5 11l-2 5h6l-2-5z"></path>
+                    <path d="M19 11l-2 5h6l-2-5z"></path>
+                    <path d="M3 21h18"></path>
+                </svg>
+                <h1>ПравенСъветник</h1>
+            </div>
             <p>Получете експертен анализ на вашия правен казус, изготвен от автоматизирана система, съобразен с българското законодателство.</p>
         </header>
 
         <main>
-            <!-- Интерактивна форма, която води към сигурно плащане -->
             <form action="ТУК_ЩЕ_ПОСТАВИМ_ПЛАТЕЖНИЯ_ЛИНК" method="GET">
                 <div class="form-group">
                     <label for="email">Вашият имейл адрес (за получаване на отговора):</label>
@@ -33,7 +42,6 @@
 
                 <button type="submit" class="pay-btn">Плати 9.99 € и задай въпрос</button>
 
-                <!-- Юридически защити и условия -->
                 <div class="legal-notice">
                     <p><strong>Важно правно уточнение (Disclaimer):</strong> Предоставената информация е генерирана от автоматизирана система за справка и има строго информативен характер. Тя не представлява официална правна консултация или адвокатско представителство.</p>
                     <p class="terms-link">С натискането на бутона приемате нашите <a href="terms.html" target="_blank">Общи условия</a>.</p>
